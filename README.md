@@ -4,3 +4,7 @@ This app helps you provide the right amount to return to the customer. It takes 
 Project Link: https://cash-register-app03.netlify.app/
 
 Note: This app is created from scratch using HTML, CSS , Javascript. It is mark10 project for NeogCamp submission
+
+screenshot: 
+![Screenshot (50)](https://user-images.githubusercontent.com/76784537/132488394-9b6d6517-65ec-45a5-b972-340cb5edf38f.png)
+
