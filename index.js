@@ -1,25 +1,27 @@
 const billAmount = document.getElementById("bill-amount");
 const cashGiven = document.getElementById("cash-given");
-const checkButton = document.getElementById("check-btn");
+const nextBtn = document.getElementById("next-btn");
+const checkBtn = document.getElementById("check-btn");
 const errorMessage = document.getElementById("error-message");
+const cashContainer = document.getElementById("cash-container");
+const changeTable = document.getElementById("change-Table");
 
-checkButton.addEventListener("click", () => {
-  errorMessage.style.display = "none";
+nextBtn.addEventListener("click", () => {
   if (billAmount.value > 0) {
-    if (cashGiven.value >= billAmount.value) {
-      const amountToBeReturned = cashGiven.value - billAmount.value;
-      calculateChange(amountToBeReturned);
-    } else {
-      showMessage("The cash provided should atleast be equal to bill amount");
-    }
+    hideMessage();
+    nextBtn.style.display = "none";
+    cashContainer.style.display = "flex";
+    changeTable.style.display = "none";
   } else {
-    showMessage("Invalid Bill Amount");
+    showError("Bill amount should be greater than 0.");
   }
 });
 
-const amountToBeReturned = () => {};
-
-const showMessage = (message) => {
+const hideMessage = () => {
+  errorMessage.style.display = "none";
+  errorMessage.innerText = "";
+};
+const showError = (message) => {
   errorMessage.style.display = "block";
   errorMessage.textContent = message;
 };

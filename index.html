@@ -14,20 +14,40 @@
         Enter the bill amount and cash given by customer and know minimum number
         of notes to return.
       </p>
-      <label for="bill-amount">Bill Amount: </label>
-      <input id="bill-amount" type="text" />
-
-      <label for="cash-given">Cash Given:</label>
-      <input id="cash-given" type="text" />
-      <button id="check-btn">Check</button>
+      <label class="bill-label" for="bill-amount">Bill Amount: </label>
+      <input
+        class="bill-input"
+        id="bill-amount"
+        type="text"
+        placeholder="Enter Amount"
+      />
+      <button class="btn btn-next" id="next-btn ">Next</button>
       <p id="error-message"></p>
-      <table class="change-table">
+
+      <label class="cash-label" for="cash-given">Cash Given:</label>
+      <input
+        class="cash-input"
+        id="cash-given"
+        type="text"
+        placeholder="Enter Cash Amount"
+      />
+      <button class="btn btn-check" id="check-btn">Check</button>
+      <p id="error-message"></p>
+
+      <table id="change-table">
         <caption>
           Return Change
         </caption>
+        <h4 id="return-amnt"></h4>
         <tr>
           <th>No of Notes</th>
-          <td></td>
+          <td class="notes-count"></td>
+          <td class="notes-count"></td>
+          <td class="notes-count"></td>
+          <td class="notes-count"></td>
+          <td class="notes-count"></td>
+          <td class="notes-count"></td>
+          <td class="notes-count"></td>
         </tr>
         <tr>
           <th>Note</th>
